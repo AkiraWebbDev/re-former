@@ -1,0 +1,12 @@
+<div>
+    <form action="/users" method="post" accept-charset="UTF-8" >
+        <label for="username">username</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">password</label>
+        <input type="password" id="password" name="password"><br><br>
+        <label for="email">email</label>
+        <input type="email" id="email" name="email"><br><br>
+        <input type="submit" name="commit" value="New User" data-turbo="false" data-disable-with="New User">
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    </form>
+</div>
