@@ -1,0 +1,17 @@
+
+<%= form_with model: @user, url: users_path(@user) do |form|%>
+    <div>
+        <%= @user.errors.full_messages %>
+        <br>
+        <%= form.label :username %>
+        <%= form.text_field :username, required: true, placeholder:'Username_123'%>
+        <br><br>
+        <%= form.label :password %>
+        <%= form.password_field :password, required: true, placeholder:'Strong-password' %>
+        <br><br>
+        <%= form.label :email %>
+        <%= form.email_field :email, requried: true, placeholder:'example@example.com'%>
+        <br><br>
+        <%= form.submit %>
+    </div>
+<% end %>
